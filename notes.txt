@@ -1,0 +1,75 @@
+1. How does the location of a property impact its assessed value?
+
+Visualization:
+Heatmap of property values by county, showing the variation in assessed values across different locations.
+Bar chart comparing the average assessed values of properties in different counties.
+
+Transition:
+Transition from the location question to the property size question by highlighting the importance of location as a primary factor in property value determination.
+
+Statistical Test:
+Analysis of Variance (ANOVA) or Kruskal-Wallis test to compare the assessed values of properties in different locations.
+
+Hypothesis: The location of a property has a significant impact on its assessed value.
+
+Hypothesis Test:
+Null Hypothesis (H0): The location of a property does not have a significant impact on its assessed value.
+Alternative Hypothesis (HA): The location of a property has a significant impact on its assessed value.
+
+To test this hypothesis, we can use either the Analysis of Variance (ANOVA) or the Kruskal-Wallis test, depending on the assumptions of the data.
+
+For ANOVA:
+H0: The mean assessed values of properties are equal across different locations.
+HA: The mean assessed values of properties are not equal across different locations.
+
+For Kruskal-Wallis:
+H0: The assessed values of properties are equal across different locations.
+HA: The assessed values of properties are not equal across different locations.
+
+By performing the ANOVA or Kruskal-Wallis test and analyzing the resulting p-value, we can determine whether there is sufficient evidence to reject the null hypothesis and conclude that the location of a property has a significant impact on its assessed value.
+
+2. How does the square footage of a property relate to its assessed value?
+
+Visualization:
+
+Scatter plot showing the relationship between the square footage and assessed value of properties, with a regression line.
+Box plot comparing the distribution of assessed values across different size categories (e.g., small, medium, large properties).
+
+Transition:
+Transition from the property size question to the number of bedrooms/bathrooms question by discussing the influence of property size on value.
+
+Statistical Test:
+Pearson's correlation coefficient or Spearman's rank correlation to measure the strength and direction of the relationship between square footage and assessed value.
+
+Hypothesis: There is a significant correlation between the square footage of a property and its assessed value.
+
+
+3. What is the relationship between the number of bedrooms/bathrooms and the assessed value?
+
+Visualization:
+
+Box plot comparing the assessed values of properties based on the number of bedrooms or bathrooms.
+Violin plot displaying the distribution of assessed values for different bedroom or bathroom counts.
+Transition:
+
+Transition from the number of bedrooms/bathrooms question to the property age question by discussing the impact of property characteristics on value.
+Statistical Test:
+
+Independent samples t-test or Mann-Whitney U test to compare the assessed values of properties with different bedroom or bathroom counts.
+Hypothesis: Properties with a higher number of bedrooms or bathrooms have a significantly different assessed value compared to properties with fewer bedrooms or bathrooms.
+
+
+4. Does the year built of a property affect its assessed value? Are newer properties generally assessed at higher values?
+
+Visualization:
+
+Line plot showing the average assessed value of properties over time, categorized by different age groups.
+Box plot comparing the assessed values of newer and older properties.
+Transition:
+
+Transition from the property age question to the conclusion by summarizing the findings of all the previous questions.
+Statistical Test:
+
+Independent samples t-test or Mann-Whitney U test to compare the assessed values of newer and older properties.
+Hypothesis: There is a significant difference in the assessed values of newer and older properties.
+By presenting these questions in a sorted order, with visualizations, transitions, and statistical tests, you can provide stakeholders with a clear and meaningful roadmap for understanding the key drivers of property value.
