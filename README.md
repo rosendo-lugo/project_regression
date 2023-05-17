@@ -13,6 +13,7 @@
 
 ## THE Big Pipeline Plan
 > Acquire
+
     >- get the data into pandas
     >- look at it
         >>- describe, info, head, shape
@@ -21,6 +22,7 @@
       >>- know what your target variable is
     
 > Wrangle
+
     >- clean the data
        >>- handle nulls
        >>- handle outliers
@@ -32,6 +34,7 @@
     >- document how your changing the data
 
 > Explore
+
     >- use only train data!
        >>- use unscaled data
     >- establish relationships using multivariate analysis
@@ -43,6 +46,7 @@
        >>- when using RFE, use scaled data
 
 > Model
+
     >- use scaled/encoded data
     >- split into X_variables and y_variables
       >>- X_train, y_train, X_validate, y_validate, X_test, y_test
@@ -54,6 +58,7 @@
     >- pick the best model and evaluate it on test
 
 > Models used
+
     >- Ordinary Least Squares + RFE
     >- LASSO + LARS
     >- Polynomial Regression
