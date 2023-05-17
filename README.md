@@ -12,57 +12,52 @@
 
 
 ## THE Big Pipeline Plan
-> Acquire
-
-    >- get the data into pandas
-    >- look at it
-        >>- describe, info, head, shape
-    >- understand what your data means
-        >>- know what each column is
-      >>- know what your target variable is
+Acquire
+>- get the data into pandas
+>- look at it
+    >>- describe, info, head, shape
+>- understand what your data means
+    >>- know what each column is
+  >>- know what your target variable is
     
-> Wrangle
+Wrangle
+>- clean the data
+   >>- handle nulls
+   >>- handle outliers
+   >>- correct datatypes
+>- univariate analysis (looking at only one variable)
+>- encode variables -- Preprocessing
+>- split into train, validate/, test
+>- scale data (after train/validate/test split) -- Preprocessing
+>- document how your changing the data
 
-    >- clean the data
-       >>- handle nulls
-       >>- handle outliers
-       >>- correct datatypes
-    >- univariate analysis (looking at only one variable)
-    >- encode variables -- Preprocessing
-    >- split into train, validate/, test
-    >- scale data (after train/validate/test split) -- Preprocessing
-    >- document how your changing the data
+Explore
+>- use only train data!
+   >>- use unscaled data
+>- establish relationships using multivariate analysis
+   >>- hypothesize
+   >>- visualize
+   >>- statistize
+   >>- summarize
+>- feature engineering
+   >>- when using RFE, use scaled data
 
-> Explore
+Model
+>- use scaled/encoded data
+>- split into X_variables and y_variables
+  >>- X_train, y_train, X_validate, y_validate, X_test, y_test
+>- build models
+  >>- make the thing
+  >>- fit the thing (on train)
+  >>- use the thing
+>- evaluate models on train and validate
+>- pick the best model and evaluate it on test
 
-    >- use only train data!
-       >>- use unscaled data
-    >- establish relationships using multivariate analysis
-       >>- hypothesize
-       >>- visualize
-       >>- statistize
-       >>- summarize
-    >- feature engineering
-       >>- when using RFE, use scaled data
-
-> Model
-
-    >- use scaled/encoded data
-    >- split into X_variables and y_variables
-      >>- X_train, y_train, X_validate, y_validate, X_test, y_test
-    >- build models
-      >>- make the thing
-      >>- fit the thing (on train)
-      >>- use the thing
-    >- evaluate models on train and validate
-    >- pick the best model and evaluate it on test
-
-> Models used
-
-    >- Ordinary Least Squares + RFE
-    >- LASSO + LARS
-    >- Polynomial Regression
-    >- Generalized Linear Model
+Models used
+>- Ordinary Least Squares + RFE
+>- LASSO + LARS
+>- Polynomial Regression
+>- Generalized Linear Model
     
 
 ## Data Dictionary
