@@ -311,7 +311,7 @@ def get_models_dataframe(baseline, tr, y_tr, y_val, y_ts, X_tr_sc, X_val_sc, X_t
     rmse, r2 = m.metrics_reg(y_val, pred_glm)
     metrics_df.loc[11] = ['glm', rmse, r2]
 
-    return metrics_df
+    return metrics_df, pred_lr_rfe, pred_lr, pred_lars, pred_pr, pred_glm
 
 # ----------------------------------------------------------------------------------
 def get_best_model(baseline, tr, y_tr, y_val, y_ts, X_tr_sc, X_val_sc, X_ts_sc):
