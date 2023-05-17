@@ -52,16 +52,16 @@ def get_anova_n_kruskal_test(tr_smpl):
     # significance level
     alpha = .05
 
-    # Perform one-way ANOVA
-    fvalue, pvalue = stats.f_oneway(*[property_value[county == c] for c in county.unique()])
+#     # Perform one-way ANOVA
+#     fvalue, pvalue = stats.f_oneway(*[property_value[county == c] for c in county.unique()])
 
-    # Print the results
-    print("ANOVA - p-value:", pvalue)
+#     # Print the results
+#     print("ANOVA - p-value:", pvalue)
 
-    if pvalue < alpha:
-        print('We reject the null hypothesis\n')
-    else:
-        print('We fail to reject the null hypothesis\n')
+#     if pvalue < alpha:
+#         print('We reject the null hypothesis\n')
+#     else:
+#         print('We fail to reject the null hypothesis\n')
 
 
     # Perform Kruskal-Wallis test
