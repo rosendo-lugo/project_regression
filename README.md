@@ -15,9 +15,9 @@
 Acquire
 >- get the data into pandas
 >- look at it
-    >>- describe, info, head, shape
+  >>- describe, info, head, shape
 >- understand what your data means
-    >>- know what each column is
+  >>- know what each column is
   >>- know what your target variable is
     
 Wrangle
