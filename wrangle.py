@@ -64,11 +64,21 @@ def get_zillow_data():
                             'fips':'county','transaction_0':'transaction_year',
                             'transaction_1':'transaction_month','transaction_2':'transaction_day'})
     
-    # Look at properties less than 6,000 sqft
-    df = df[df.area < 6000]
-    
-    # Property value reduce to 95% total
-    df = df[df.property_value < df.property_value.quantile(0.95)]
+    # total outliers removed are 6029 out of 52442
+    # # Look at properties less than 1.5 and over 5.5 bedrooms (Outliers were removed)
+    # df = df[~(df['bedrooms'] < 1.5) & ~(df['bedrooms'] > 5.5)]
+
+    # Look at properties less than .5 and over 4.5 bathrooms (Outliers were removed)
+    df = df[~(df['bathrooms'] < .5) & ~(df['bathrooms'] > 4.5)]
+
+    # Look at properties less than 1906.5 and over 2022.5 years (Outliers were removed)
+    df = df[~(df['yearbuilt'] < 1906.5) & ~(df['yearbuilt'] > 2022.5)]
+
+    # Look at properties less than -289.0 and over 3863.0 area (Outliers were removed)
+    df = df[~(df['area'] < -289.0) & ~(df['area'] > 3863.0)]
+
+    # Look at properties less than -444576.5 and over 1257627.5 property value (Outliers were removed)
+    df = df[~(df['property_value'] < -444576.5) &  ~(df['property_value'] > 1257627.5)]
     
     # replace missing values with "0"
     df = df.fillna({'bedrooms':0,'bathrooms':0,'area':0,'property_value':0,'county':0})
@@ -120,6 +130,30 @@ def get_split(df):
     tr, val = train_test_split(train_validate, test_size=.25, random_state=123)
     
     return tr, val, ts
+
+# ----------------------------------------------------------------------------------
+# remove all outliers put each feature one at a time
+def outlier(df, feature, m=1.5):
+    '''
+    outlier will take in a dataframe's feature:
+    - calculate it's 1st & 3rd quartiles,
+    - use their difference to calculate the IQR
+    - then apply to calculate upper and lower bounds
+    - using the `m` multiplier
+    '''
+    q1 = df[feature].quantile(.25)
+    q3 = df[feature].quantile(.75)
+    
+    iqr = q3 - q1
+    
+    multiplier = m
+    upper_bound = q3 + (multiplier * iqr)
+    lower_bound = q1 - (multiplier * iqr)
+    
+    return upper_bound, lower_bound
+
+# upper_bound, lower_bound = outlier(df, 'bedroomcnt')
+
 
 
 

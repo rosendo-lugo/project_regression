@@ -39,7 +39,7 @@ def get_qone_chart(tr_smpl):
     plt.title('Average Assessed Property Values by County')
     plt.xlabel('County')
     plt.ylabel('Average Property Value')
-    plt.xticks(rotation=90)
+    plt.xticks(rotation=0)
     plt.show()
 # ----------------------------------------------------------------------------------
 def get_anova_n_kruskal_test(tr_smpl):
@@ -141,11 +141,11 @@ def get_qtwo_stats(tr_smpl):
 # ----------------------------Question three----------------------------------------
 def get_qthree_chart(tr_smpl):
     # Create a scatter plot
-    plt.figure(figsize=(10, 6))
+    plt.figure(figsize=(9, 6))
 
     # Scatter plot with x-axis as the number of bedrooms, y-axis as the number of bathrooms,
     # and color of markers representing the property value
-    plt.scatter(tr_smpl['bedrooms'], tr_smpl['bathrooms'], c=tr_smpl['property_value'], cmap='cool', s=50)
+    plt.scatter(tr_smpl['bedrooms'], tr_smpl['bathrooms'], c=tr_smpl['property_value'], cmap='cool', s=80)
 
     # Add a color bar to show the mapping of colors to property values
     plt.colorbar(label='Property Value')
