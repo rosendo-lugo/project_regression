@@ -10,20 +10,21 @@
 > Find what states and counties are the property located in.
 
 
+
 ## THE Big Pipeline Plan
 > Acquire
     >- get the data into pandas
     >- look at it
-      >- describe, info, head, shape
+        >>- describe, info, head, shape
     >- understand what your data means
-      >- know what each column is
-      >- know what your target variable is
+        >>- know what each column is
+      >>- know what your target variable is
     
 > Wrangle
     >- clean the data
-       >- handle nulls
-       >- handle outliers
-       >- correct datatypes
+       >>- handle nulls
+       >>- handle outliers
+       >>- correct datatypes
     >- univariate analysis (looking at only one variable)
     >- encode variables -- Preprocessing
     >- split into train, validate/, test
@@ -32,23 +33,23 @@
 
 > Explore
     >- use only train data!
-       >- use unscaled data
+       >>- use unscaled data
     >- establish relationships using multivariate analysis
-       >- hypothesize
-       >- visualize
-       >- statistize
-       >- summarize
+       >>- hypothesize
+       >>- visualize
+       >>- statistize
+       >>- summarize
     >- feature engineering
-       >- when using RFE, use scaled data
+       >>- when using RFE, use scaled data
 
 > Model
     >- use scaled/encoded data
     >- split into X_variables and y_variables
-      >- X_train, y_train, X_validate, y_validate, X_test, y_test
+      >>- X_train, y_train, X_validate, y_validate, X_test, y_test
     >- build models
-      >- make the thing
-      >- fit the thing (on train)
-      >- use the thing
+      >>- make the thing
+      >>- fit the thing (on train)
+      >>- use the thing
     >- evaluate models on train and validate
     >- pick the best model and evaluate it on test
 
@@ -57,6 +58,7 @@
     >- LASSO + LARS
     >- Polynomial Regression
     >- Generalized Linear Model
+    
 
 ## Data Dictionary
 
